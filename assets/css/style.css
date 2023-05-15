@@ -5,18 +5,19 @@
     --color-dark-900: #171717;
 
     --color-red-700: #C4164B;
+
+    --fonte-principal: 'Ubuntu', sans-serif;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: var(--fonte-principal);
     text-decoration: none;
 }
 
 body {
-    width: 100%;
     background-color: var(--color-dark-900);
     color: var(--color-ligth-100);
 }
@@ -31,7 +32,7 @@ body {
 }
 
 .cabecalho-menu-link{
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 600;
     color: var(--color-ligth-100);
 }
@@ -41,10 +42,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 40px;
 }
 
 .conteudo .conteudo-descricao {
-    width: 600px;
+    width: 50%;
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -57,7 +59,7 @@ body {
 }
 
 .conteudo-descricao-texto h1 {
-    font-size: 36px;
+    font-size: 2rem;
 }
 
 .titulo-destaque {
@@ -65,23 +67,25 @@ body {
 }
 
 .conteudo-descricao-texto p {
-    font-size: 24px;
+    font-size: 1.5rem;
     text-align: justify;
 }
 
 .conteudo-descricao-botoes {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px
 }
 
 .conteudo-descricao-botoes-btn {
     background-color: var(--color-red-700);
-    width: 280px;
+    width: 50%;
     padding: 21px 0;
     border-radius: 16px;
     text-align: center;
     color: var(--color-ligth-100);
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 600;
 }
 
@@ -90,12 +94,16 @@ body {
     box-shadow: 0px 0px 10px rgba(169, 0, 51, 0.8);
 }
 
+.conteudo-img{
+    width: 30%;
+}
+
 .rodape{
     color: var(--color-ligth-100);
     background-color: var(--color-red-700);
     padding: 24px;
     text-align: center;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 400;
 }
 
@@ -105,10 +113,34 @@ body {
 }
 
 .conteudo-descricao h1{
-    font-size: 36px;
+    font-size: 2rem;
 }
 
 .conteudo-descricao p {
-    font-size: 24px;
+    font-size: 1.5rem;
     text-align: justify;
+}
+
+@media (max-width: 1200px){
+    .cabecalho{
+        padding: 10%;
+    }
+
+    .cabecalho-menu{
+        justify-content: center;
+    }
+
+    .conteudo{
+        flex-direction: column-reverse;
+        padding: 5%;
+        margin: 0;
+    }
+
+    .conteudo .conteudo-descricao{
+        width: auto;
+    }
+
+    .conteudo-img{
+        width: 50%;
+    }
 }
